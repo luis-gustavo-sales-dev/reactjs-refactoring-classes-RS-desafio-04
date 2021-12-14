@@ -1,4 +1,4 @@
-import { Component, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import ReactModal from 'react-modal';
 
 interface ModalProps {
@@ -8,18 +8,6 @@ interface ModalProps {
 }
 
 export function Modal ({ children, isOpen, setIsOpen}: ModalProps) {
-
-
-  /*componentDidUpdate(prevProps) {
-    const { isOpen } = this.props;
-
-    if (prevProps.isOpen !== isOpen) {
-      console.log(this.props)
-      this.setState({ modalStatus: isOpen })
-    }
-  }*/
-
-
 
     return (
       <ReactModal
