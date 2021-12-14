@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Header from "../components/Header";
 import api from "../services/api";
 
 interface Food {
@@ -12,6 +13,7 @@ interface Food {
 const Dashboard = (): JSX.Element => {
     const [foods, setFoods] = useState<Food[]>([])
     const [editingFood, setEditingFood] = useState<Food>()
+    const [modalOpen, setModalOpen] = useState(false)
 
     useEffect( () => {
         async function loadFoods () {
@@ -40,11 +42,8 @@ const Dashboard = (): JSX.Element => {
 
     async function handleUpdateFood(food: Food) {
         try {
-            const foodUpdated: Food = await api.put(`/foods/${5}`, {
-                "name": "bbbbbb",
-                "description": "bbbbbbb",
-                "price": "123",
-                "image": "hhttp"
+            const foodUpdated: Food = await api.put(`/foods/${editingFood?.id}`, {
+                ...food
             }).then( response => response.data)
 
             const foodsUpdated = foods.map( f => 
@@ -64,6 +63,9 @@ const Dashboard = (): JSX.Element => {
         }
     }
 
+    function toggleModal () {
+        setModalOpen(!modalOpen)
+    }
     async function testeAddFood() {
         let tempFood = {
             "name": "aaaa",
@@ -75,6 +77,7 @@ const Dashboard = (): JSX.Element => {
     }
 
     return (<>
+        <Header openModal={toggleModal}/>
         <h1>Dashboard</h1>
         { foods.map( (f) => {
             return <li key={f.id}>{f.id + " " +f.name}</li>
