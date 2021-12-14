@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Food from "../../components/Food";
 import Header from "../../components/Header";
 import { ModalAddFood } from "../../components/ModalAddFood";
+import { ModalEditFood } from "../../components/ModalEditFood";
 import api from "../../services/api";
 import IFood from "../../utils/types/food";
 import { FoodsContainer } from "./styles";
@@ -74,20 +75,14 @@ const Dashboard = (): JSX.Element => {
         setModalOpen(!modalOpen)
     }
 
+    function toggleEditModal () {
+      setEditModalOpen(!editModalOpen)
+    }
+
     function handleEditFood (food: IFood) {
         setEditingFood(food)
         setEditModalOpen(true)
     }
-    /*
-    async function testeAddFood() {
-        let tempFood = {
-            "name": "aaaa",
-            "description": "aaaaaaaa",
-            "price": "123",
-            "image": "hhttp"
-        }
-        await handleUpdateFood(tempFood)
-    }*/
 
     return (
       <>
@@ -97,14 +92,13 @@ const Dashboard = (): JSX.Element => {
           setIsOpen={toggleModal}
           handleAddFood={handleAddFood}
         />
-        {/*
+    
         <ModalEditFood
           isOpen={editModalOpen}
-          setIsOpen={this.toggleEditModal}
+          setIsOpen={toggleEditModal}
           editingFood={editingFood}
-          handleUpdateFood={this.handleUpdateFood}
-        />*/
-        }
+          handleUpdateFood={handleUpdateFood}
+        />
 
         <FoodsContainer data-testid="foods-list">
           {foods &&
