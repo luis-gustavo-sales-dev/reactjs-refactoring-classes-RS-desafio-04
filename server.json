@@ -23,28 +23,6 @@
       "price": "25.90",
       "available": false,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
-    },
-    {
-      "name": "bbbbbb",
-      "description": "bbbbbbb",
-      "price": "123",
-      "image": "hhttp",
-      "id": 4
-    },
-    {
-      "name": "bbbbbb",
-      "description": "bbbbbbb",
-      "price": "123",
-      "image": "hhttp",
-      "id": 5
-    },
-    {
-      "image": "http",
-      "name": "Hamburguér",
-      "price": "19.90",
-      "description": "Pão com carne comum",
-      "available": true,
-      "id": 6
     }
   ]
 }
