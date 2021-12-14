@@ -1,9 +1,9 @@
 import { FormHandles } from "@unform/core";
-import { Form } from "@unform/web";
 import { createRef } from "react";
 import { FiCheckSquare } from "react-icons/fi";
 import Input from "../Input";
 import Modal from "../Modal";
+import { Form } from "./styles";
 
 interface ModalAddFoodProps {
     isOpen: boolean;

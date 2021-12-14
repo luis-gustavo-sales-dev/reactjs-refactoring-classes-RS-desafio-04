@@ -37,6 +37,14 @@
       "price": "123",
       "image": "hhttp",
       "id": 5
+    },
+    {
+      "image": "http",
+      "name": "Hamburguér",
+      "price": "19.90",
+      "description": "Pão com carne comum",
+      "available": true,
+      "id": 6
     }
   ]
 }
