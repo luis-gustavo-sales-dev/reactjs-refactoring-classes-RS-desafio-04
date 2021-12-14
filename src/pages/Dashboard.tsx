@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
+import { ModalAddFood } from "../components/ModalAddFood";
 import api from "../services/api";
 
 interface Food {
@@ -78,6 +79,11 @@ const Dashboard = (): JSX.Element => {
 
     return (<>
         <Header openModal={toggleModal}/>
+        <ModalAddFood 
+            isOpen={modalOpen}
+            setIsOpen={toggleModal}
+            handleAddFood={handleAddFood}
+        />
         <h1>Dashboard</h1>
         { foods.map( (f) => {
             return <li key={f.id}>{f.id + " " +f.name}</li>
