@@ -25,19 +25,17 @@
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
     },
     {
-      "name": "aaaa",
-      "description": "aaaaaaaa",
+      "name": "bbbbbb",
+      "description": "bbbbbbb",
       "price": "123",
       "image": "hhttp",
-      "available": true,
       "id": 4
     },
     {
-      "name": "aaaa",
-      "description": "aaaaaaaa",
+      "name": "bbbbbb",
+      "description": "bbbbbbb",
       "price": "123",
       "image": "hhttp",
-      "available": true,
       "id": 5
     }
   ]
